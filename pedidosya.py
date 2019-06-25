@@ -42,7 +42,7 @@ with Browser('firefox', headless=True) as browser:
     ]
     url = "https://www.pedidosya.cl/login?returnUrl=myVoucherWallet"
     datetime = datetime.datetime.now()
-    os.mkdir('/home/blac/pedidosya/'+datetime.strftime("%H:%M:%S"))
+    os.mkdir('/home/rocha/pedidosya/'+datetime.strftime("%H:%M:%S"))
     browser.visit(url)
     for account in accounts:
         time.sleep(1)
@@ -50,7 +50,7 @@ with Browser('firefox', headless=True) as browser:
         browser.fill('password', account[1])
         browser.find_by_id('login').click()
         time.sleep(3)
-        browser.driver.get_screenshot_as_file('/home/blac/pedidosya/'+datetime.strftime("%H:%M:%S")+'/'+account[0]+'.png')
+        browser.driver.get_screenshot_as_file('/home/rocha/pedidosya/'+datetime.strftime("%H:%M:%S")+'/'+account[0]+'.png')
         time.sleep(2)
         driver.delete_all_cookies()
         time.sleep(2)
