@@ -21,7 +21,24 @@ with Browser('firefox', headless=True) as browser:
     driver.set_window_size(1280, 1200)
     accounts = [
     ['nica.par@mailinator.com', '123456'],
-    ['mail', 'pass']
+    ['alfred.gonzalez@mailinator.com', '123456'],
+    ['any.sky@mailinator.com', '123456'],
+    ['alf.manriquez.z@gmail.com', '123456'],
+    ['ar.gomez@mailinator.com', '123456'],
+    ['carm.rocha@mailinator.com', '123456'],
+    ['esteban.gonzalez@mailinator.com', '123qwe'],
+    ['esteban.quito@mailinator.com', '123456'],
+    ['ig.quevedo@mailinator.com', '123456'],
+    ['ig.rayen@mailinator.com', '123456'],
+    ['ig.rocha@alumnos.duoc.cl', 'Cyn040212'],
+    ['nvapibvkdfvn@mailinator.com', '123456'],
+    ['pete.anguila@mailinator.com', '123456'],
+    ['qwerty@mailinator.com', '123456'],
+    ['su.schultz@mailinator.com', '123456'],
+    ['vale.quevedo@mailinator.com', '123456'],
+    ['vale.ming@mailinator.com', '123456'],
+    ['vale.rocha@mailinator.com', '123456'],
+    ['wilsouls@gmail.com', '123456']
     ]
     url = "https://www.pedidosya.cl/login?returnUrl=myVoucherWallet"
     datetime = datetime.datetime.now()
