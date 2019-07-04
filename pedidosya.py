@@ -31,6 +31,7 @@ with Browser('firefox', headless=True) as browser:
     ['ig.quevedo@mailinator.com', '123456'],
     ['ig.rayen@mailinator.com', '123456'],
     ['ig.rocha@alumnos.duoc.cl', 'Cyn040212'],
+    ['ig.toro@mailinator.com','123456'],
     ['nvapibvkdfvn@mailinator.com', '123456'],
     ['pete.anguila@mailinator.com', '123456'],
     ['qwerty@mailinator.com', '123456'],
@@ -38,12 +39,13 @@ with Browser('firefox', headless=True) as browser:
     ['vale.quevedo@mailinator.com', '123456'],
     ['vale.ming@mailinator.com', '123456'],
     ['vale.rocha@mailinator.com', '123456'],
-    ['wilsouls@gmail.com', '123456']
+    ['wilsouls@gmail.com', 'Cyn040212']
     ]
-    url = "https://www.pedidosya.cl/login?returnUrl=myVoucherWallet"
+    urlcupon = "https://www.pedidosya.cl/login?returnUrl=myVoucherWallet"
+    url = "https://www.pedidosya.cl/login?returnUrl=myOrders"
     datetime = datetime.datetime.now()
     os.mkdir('/home/rocha/pedidosya/'+datetime.strftime("%H:%M:%S"))
-    browser.visit(url)
+    browser.visit(urlcupon)
     for account in accounts:
         time.sleep(1)
         browser.fill('email', account[0])
@@ -54,5 +56,5 @@ with Browser('firefox', headless=True) as browser:
         time.sleep(2)
         driver.delete_all_cookies()
         time.sleep(2)
-        browser.visit(url)
+        browser.visit(urlcupon)
     sys.exit(0)
