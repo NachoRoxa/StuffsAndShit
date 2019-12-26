@@ -24,6 +24,7 @@ with Browser('firefox', headless=True) as browser:
     ['alfred.gonzalez@mailinator.com', '123456'],
     ['any.sky@mailinator.com', '123456'],
     ['alf.manriquez.z@gmail.com', '123456'],
+    ['alf.fernandez@mailinator.com','123456'],
     ['ar.gomez@mailinator.com', '123456'],
     ['carm.rocha@mailinator.com', '123456'],
     ['esteban.gonzalez@mailinator.com', '123qwe'],
