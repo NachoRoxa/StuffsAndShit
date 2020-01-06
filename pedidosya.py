@@ -16,12 +16,13 @@ from selenium.webdriver.support import expected_conditions as EC
 
 from splinter import Browser
 
-with Browser('firefox', headless=True) as browser:
+with Browser('opera', headless=True) as browser:
     driver = browser.driver
     driver.set_window_size(1280, 1200)
     accounts = [
     ['nica.par@mailinator.com', '123456'],
     ['alfred.gonzalez@mailinator.com', '123456'],
+    ['alfredo.pavez@mailinator.com','123456'],
     ['any.sky@mailinator.com', '123456'],
     ['alf.manriquez.z@gmail.com', '123456'],
     ['alf.fernandez@mailinator.com','123456'],
@@ -32,11 +33,17 @@ with Browser('firefox', headless=True) as browser:
     ['ig.quevedo@mailinator.com', '123456'],
     ['ig.rayen@mailinator.com', '123456'],
     ['ig.rocha@alumnos.duoc.cl', 'Cyn040212'],
+    ['ignacio.rocha@mailinator.com','123456'],
+    ['ig.perez@mailinator.com','123456'],
+    ['irocha@mailinator.com','123456'],
     ['ig.toro@mailinator.com','123456'],
     ['nvapibvkdfvn@mailinator.com', '123456'],
+    ['nacho.rocha@mailinator.com','123456'],
     ['pete.anguila@mailinator.com', '123456'],
+    ['pedro.mon@mailinator.com','123456'],
     ['qwerty@mailinator.com', '123456'],
     ['su.schultz@mailinator.com', '123456'],
+    ['seba.bravo@mailinator.com','123456'],
     ['vale.quevedo@mailinator.com', '123456'],
     ['vale.ming@mailinator.com', '123456'],
     ['vale.rocha@mailinator.com', '123456'],
@@ -45,7 +52,8 @@ with Browser('firefox', headless=True) as browser:
     urlcupon = "https://www.pedidosya.cl/login?returnUrl=myVoucherWallet"
     url = "https://www.pedidosya.cl/login?returnUrl=myOrders"
     datetime = datetime.datetime.now()
-    os.mkdir('/home/rocha/pedidosya/'+datetime.strftime("%H:%M:%S"))
+    # os.mkdir('/home/rocha/pedidosya/'+datetime.strftime("%H:%M:%S"))
+    os.mkdir('D:\Projects\StuffsAndShit\pedidosya'+datetime.strftime("%H:%M:%S"))
     browser.visit(urlcupon)
     for account in accounts:
         time.sleep(1)
